@@ -11,6 +11,7 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "puleeno/wallery": "dev-master"
+        "puleeno/wallery": "dev-master",
+        "ramphor/user-profile": "dev-master"
     }
 }

@@ -29,8 +29,8 @@ class Clacebooking {
 		/**
 		 * Load library via Composer package manager
 		 */
-		$composer = sprintf('%s/vendor/autoload.php', PBABSPATH);
-		if (file_exists($composer)) {
+		$composer = sprintf( '%s/vendor/autoload.php', PBABSPATH );
+		if ( file_exists( $composer ) ) {
 			require_once $composer;
 		}
 
