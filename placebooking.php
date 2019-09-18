@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: PlaceBooking
+ * Plugin Name: Placebooking
  * Plugin URI: https://puleeno.com
  * Author: Ramphor Premium
  * Author URI: https://puleeno.com
