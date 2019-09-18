@@ -35,7 +35,7 @@ class Clacebooking {
 		}
 	}
 
-	public function is_request( $request ) {
+	private function is_request( $type ) {
 		switch ( $type ) {
 			case 'admin':
 				return is_admin();

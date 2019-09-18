@@ -1,5 +1,4 @@
 <?php
-die( 'zo' );
 class Placebooking_Place_Metabox {
 	public function __construct() {
 		add_action( 'add_meta_boxes', array( $this, 'add_meta_box' ) );
