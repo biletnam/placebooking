@@ -26,6 +26,17 @@ class Clacebooking {
 	}
 
 	public function includes() {
+		/**
+		 * Load library via Composer package manager
+		 */
+		$composer = sprintf('%s/vendor/autoload.php', PBABSPATH);
+		if (file_exists($composer)) {
+			require_once $composer;
+		}
+
+		/**
+		 * Load WordPress native plugin
+		 */
 		require_once PBABSPATH . '/includes/class-placebooking-post-types.php';
 		if ( $this->is_request( 'admin' ) ) {
 			require_once PBABSPATH . '/includes/admin/class-placebooking-admin.php';

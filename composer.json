@@ -1,0 +1,16 @@
+{
+    "name": "ramphor/placebooking",
+    "description": "The PlaceBooking used to booking the seat or room at hotel, restaurant, apartment or office",
+    "type": "project",
+    "license": "GPL-v3",
+    "authors": [
+        {
+            "name": "Puleeno Nguyen",
+            "email": "puleeno@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "puleeno/wallery": "dev-master"
+    }
+}

@@ -5,10 +5,11 @@ class Placebooking_Place_Metabox {
 	}
 
 	public function add_meta_box() {
-		add_meta_box( 'place-info', __( 'Place Informations', 'placebooking' ), array( $this, 'render' ), array( Placebooking_Post_Types::PLACEBOOKING_POST_TYPE ) );
+		add_meta_box( 'place_info', __( 'Place Informations', 'placebooking' ), array( $this, 'render' ), array( Placebooking_Post_Types::PLACEBOOKING_POST_TYPE ) );
 	}
 
-	public function render( $post_id ) {
+	public function render( $post ) {
+
 	}
 }
 
