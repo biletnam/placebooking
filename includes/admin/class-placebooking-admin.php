@@ -5,7 +5,8 @@ class Placebooking_Admin {
 	}
 
 	public function includes() {
-		require_once dirname(__FILE__) . '/class-placebooking-place-metabox.php';
+		require_once dirname( __FILE__ ) . '/class-placebooking-place-metabox.php';
 	}
 }
 
+new Placebooking_Admin();

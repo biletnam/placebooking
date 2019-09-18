@@ -27,11 +27,11 @@ class Clacebooking {
 
 	public function includes() {
 		require_once PBABSPATH . '/includes/class-placebooking-post-types.php';
-		if($this->is_request('admin')) {
+		if ( $this->is_request( 'admin' ) ) {
 			require_once PBABSPATH . '/includes/admin/class-placebooking-admin.php';
 		}
 		if ( $this->is_request( 'frontend' ) ) {
-			$this->include_frontned();
+			$this->include_frontend();
 		}
 	}
 
@@ -48,6 +48,6 @@ class Clacebooking {
 		}
 	}
 
-	public function include_frontned() {
+	public function include_frontend() {
 	}
 }
