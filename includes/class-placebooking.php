@@ -1,5 +1,8 @@
 <?php
 
+use Ramphor\User\Profile as UserProfile;
+use Ramphor\User\LoginStyle\Enum;
+
 class Clacebooking {
 	protected static $instance;
 
@@ -33,7 +36,6 @@ class Clacebooking {
 		if ( file_exists( $composer ) ) {
 			require_once $composer;
 		}
-
 		/**
 		 * Load WordPress native plugin
 		 */
@@ -43,6 +45,18 @@ class Clacebooking {
 		}
 		if ( $this->is_request( 'frontend' ) ) {
 			$this->include_frontend();
+		}
+
+		if ( class_exists( UserProfile::class ) ) {
+			UserProfile::init(
+				array(
+					'templates_location' => sprintf( '%s/templates/members', PBABSPATH ),
+					'login_styles'       => array(
+						Enum::LOGIN_STYLE_WORDPRESS_NATIVE,
+						Enum::LOGIN_STYLE_POPUP_MODAL,
+					),
+				)
+			);
 		}
 	}
 
