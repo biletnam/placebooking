@@ -69,12 +69,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/puleeno/wallery.git",
-                "reference": "aa782d087577d989e74ea2b43e94bac6cf9fb27d"
+                "reference": "7a7e7856748247c442ca1dd8d03cdf00de149f84"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/puleeno/wallery/zipball/aa782d087577d989e74ea2b43e94bac6cf9fb27d",
-                "reference": "aa782d087577d989e74ea2b43e94bac6cf9fb27d",
+                "url": "https://api.github.com/repos/puleeno/wallery/zipball/7a7e7856748247c442ca1dd8d03cdf00de149f84",
+                "reference": "7a7e7856748247c442ca1dd8d03cdf00de149f84",
                 "shasum": ""
             },
             "type": "library",
@@ -94,7 +94,7 @@
                 }
             ],
             "description": "WordPress gallery for meta box and frontend post",
-            "time": "2019-09-18T17:25:15+00:00"
+            "time": "2019-09-18T18:56:34+00:00"
         },
         {
             "name": "ramphor/user-profile",
@@ -102,12 +102,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ramphor/user-profile.git",
-                "reference": "d0d8de5ef32d7b7bcb4fbbf26d4dbb19839c17c7"
+                "reference": "6f2b0ceea59d57b0fef03374b644b6416c2b61b3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ramphor/user-profile/zipball/d0d8de5ef32d7b7bcb4fbbf26d4dbb19839c17c7",
-                "reference": "d0d8de5ef32d7b7bcb4fbbf26d4dbb19839c17c7",
+                "url": "https://api.github.com/repos/ramphor/user-profile/zipball/6f2b0ceea59d57b0fef03374b644b6416c2b61b3",
+                "reference": "6f2b0ceea59d57b0fef03374b644b6416c2b61b3",
                 "shasum": ""
             },
             "require": {
@@ -130,7 +130,7 @@
                 }
             ],
             "description": "User profile core for embed to other plugins or themes",
-            "time": "2019-09-18T17:20:56+00:00"
+            "time": "2019-09-19T01:09:05+00:00"
         }
     ],
     "packages-dev": [],
