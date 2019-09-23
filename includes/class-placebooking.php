@@ -41,6 +41,7 @@ class Clacebooking {
 		 */
 		require_once PBABSPATH . '/includes/placebooking-helpers.php';
 		require_once PBABSPATH . '/includes/class-placebooking-post-types.php';
+		require_once PBABSPATH . '/includes/class-placebooking-template-loader.php';
 		if ( $this->is_request( 'admin' ) ) {
 			require_once PBABSPATH . '/includes/admin/class-placebooking-admin.php';
 		}
