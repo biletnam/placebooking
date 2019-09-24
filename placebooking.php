@@ -16,7 +16,7 @@ if ( ! class_exists( 'Placebooking' ) ) {
 
 if ( ! function_exists( 'placebooking' ) ) {
 	function placebooking() {
-		return Clacebooking::instance();
+		return Placebooking::instance();
 	}
 }
 
