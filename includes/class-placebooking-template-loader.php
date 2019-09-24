@@ -16,7 +16,7 @@ class Placebooking_Template_Loader {
 
 	public function locate_template( $templates, $data = array() ) {
 		$theme_templates = array();
-		foreach ( $templates as $template ) {
+		foreach ( (array) $templates as $template ) {
 			$theme_templates[] = sprintf( '%s/%s.php', 'placebooking', $template );
 		}
 		$template = locate_template( $theme_templates, false );

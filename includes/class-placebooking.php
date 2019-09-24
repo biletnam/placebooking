@@ -3,7 +3,7 @@
 use Ramphor\User\Profile as UserProfile;
 use Ramphor\User\LoginStyle\Enum;
 
-class Clacebooking {
+class Placebooking {
 	protected static $instance;
 
 	public static function instance() {
@@ -40,8 +40,11 @@ class Clacebooking {
 		 * Load WordPress native plugin
 		 */
 		require_once PBABSPATH . '/includes/placebooking-helpers.php';
+		require_once PBABSPATH . '/includes/abstracts/class-placebooking-data.php';
 		require_once PBABSPATH . '/includes/class-placebooking-post-types.php';
 		require_once PBABSPATH . '/includes/class-placebooking-template-loader.php';
+		require_once PBABSPATH . '/includes/class-placebooking-shortcodes.php';
+
 		if ( $this->is_request( 'admin' ) ) {
 			require_once PBABSPATH . '/includes/admin/class-placebooking-admin.php';
 		}
@@ -76,5 +79,7 @@ class Clacebooking {
 	}
 
 	public function include_frontend() {
+		require_once PBABSPATH . '/includes/class-placebooking-assets.php';
+		require_once PBABSPATH . '/includes/class-placebooking-template.php';
 	}
 }

@@ -1,11 +1,12 @@
 <?php
 class Placebooking_Post_Types {
-	const PLACEBOOKING_POST_TYPE       = 'place';
-	const PLACEBOOKING_LOBBY_POST_TYPE = 'lobby';
-	const PLACEBOOKING_TYPES           = 'types';
-	const PLACEBOOKING_LOCATION        = 'location';
-	const PLACEBOOKING_TAGS            = 'tag';
-	const PLACEBOOKING_AMENITIES       = 'amenities';
+	const PLACEBOOKING_POST_TYPE         = 'place';
+	const PLACEBOOKING_LOBBY_POST_TYPE   = 'lobby';
+	const PLACEBOOKING_TYPES             = 'types';
+	const PLACEBOOKING_LOCATION          = 'location';
+	const PLACEBOOKING_TAGS              = 'tag';
+	const PLACEBOOKING_AMENITIES         = 'amenities';
+	const PLACEBOOKING_SERVICE_POST_TYPE = 'service';
 
 	public function __construct() {
 		add_action( 'init', array( $this, 'register_place_post_type' ) );
@@ -60,8 +61,8 @@ class Placebooking_Post_Types {
 			'all_items'          => __( 'All Lobbies', 'placebooking' ),
 			'search_items'       => __( 'Search Lobbies', 'placebooking' ),
 			'parent_item_colon'  => __( 'Parent Lobbies:', 'placebooking' ),
-			'not_found'          => __( 'No lobbies found.', 'placebooking' ),
-			'not_found_in_trash' => __( 'No lobbies found in Trash.', 'placebooking' ),
+			'not_found'          => __( 'No services found.', 'placebooking' ),
+			'not_found_in_trash' => __( 'No services found in Trash.', 'placebooking' ),
 		);
 		$args   = array(
 			'labels'             => $labels,
@@ -80,6 +81,40 @@ class Placebooking_Post_Types {
 			'supports'           => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' ),
 		);
 		register_post_type( self::PLACEBOOKING_LOBBY_POST_TYPE, apply_filters( 'placebooking_place_post_type_args', $args, $labels ) );
+
+		$labels = array(
+			'name'               => _x( 'Services', 'post type general name', 'placebooking' ),
+			'singular_name'      => _x( 'Service', 'post type singular name', 'placebooking' ),
+			'menu_name'          => _x( 'Services', 'admin menu', 'placebooking' ),
+			'name_admin_bar'     => _x( 'Service', 'add new on admin bar', 'placebooking' ),
+			'add_new'            => _x( 'Add New', 'place', 'placebooking' ),
+			'add_new_item'       => __( 'Add New Service', 'placebooking' ),
+			'new_item'           => __( 'New Service', 'placebooking' ),
+			'edit_item'          => __( 'Edit Service', 'placebooking' ),
+			'view_item'          => __( 'View Service', 'placebooking' ),
+			'all_items'          => __( 'All Services', 'placebooking' ),
+			'search_items'       => __( 'Search Services', 'placebooking' ),
+			'parent_item_colon'  => __( 'Parent Services:', 'placebooking' ),
+			'not_found'          => __( 'No services found.', 'placebooking' ),
+			'not_found_in_trash' => __( 'No services found in Trash.', 'placebooking' ),
+		);
+		$args   = array(
+			'labels'             => $labels,
+			'description'        => __( 'The place will be booked the seat or room .', 'placebooking' ),
+			'public'             => true,
+			'publicly_queryable' => true,
+			'show_ui'            => true,
+			'show_in_menu'       => true,
+			'query_var'          => true,
+			'rewrite'            => array( 'slug' => 'service' ),
+			'capability_type'    => 'post',
+			'has_archive'        => true,
+			'hierarchical'       => false,
+			'menu_position'      => null,
+			'menu_icon'          => 'dashicons-smiley',
+			'supports'           => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' ),
+		);
+		register_post_type( self::PLACEBOOKING_SERVICE_POST_TYPE, apply_filters( 'placebooking_service_post_type_args', $args, $labels ) );
 	}
 
 	public function register_taxonomies() {

@@ -41,10 +41,7 @@ class Placebooking_Place_Metabox {
 		$data = array(
 			'price' => 1000,
 		);
-		placebooking_core_template(
-			'admin/metabox/place-info',
-			$data
-		);
+		placebooking_core_template( 'admin/metabox/place-info', $data );
 	}
 }
 
